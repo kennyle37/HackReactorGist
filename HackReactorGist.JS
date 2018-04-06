@@ -40,7 +40,7 @@ if(dog.energy + time < 100) {
 }
 
 ----
-//Function Classes
+//Functional Classes
 
 //declare the dog variable and set it to equal to the function
 	//declare the dog object = {info:info}
@@ -102,6 +102,11 @@ Dog.methods = {
     }
 }
 
+var geralt = Dog('geralt', 'husky', 100, 50, 75, 140);
+console.log(geralt);
+geralt.feed(50);
+console.log(geralt);
+
 ----
 // Prototypal Classes
 let Dog = function(name, breed, age, happiness, hunger, energy){
@@ -144,6 +149,10 @@ Dog.prototype.nap = function(time) {
     }
 }
 
+var geralt = Dog('geralt', 'husky', 100, 50, 75, 140);
+geralt.feed(50);
+console.log(geralt)
+
 ---
 //Pseudoclassical Class
 
@@ -184,3 +193,6 @@ Dog.prototype.nap = function(time) {
       this.energy = 100;
     }
 }
+
+var geralt = new Dog('geralt', 'husky', 100, 50, 75, 140);
+console.log(geralt)
